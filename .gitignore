@@ -1,3 +1,4 @@
 # dependencies
 /.idea
 .vercel
+chatbot/punkt.txt

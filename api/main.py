@@ -1,21 +1,15 @@
-from flask import Flask, request, jsonify
+from flask import Flask
 from flask_cors import CORS
-from dotenv import load_dotenv
-import os
-import nltk_sentiment_analyzer.sentiment as sentiment_analyzer
-
-load_dotenv()
 
 
 app = Flask(__name__)
 
-host = os.getenv("CLIENT_URL")
-CORS(app, resources={r"/*": {"origins": host}})
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 
 @app.route("/")
 def home():
-    return sentiment_analyzer.run()
+    return "Hello"
 
 
 if __name__ == "__main__":

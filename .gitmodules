@@ -1,3 +1,0 @@
-[submodule "api/nltk_sentiment_analyzer"]
-	path = api/nltk_sentiment_analyzer
-	url = https://github.com/DevelopedBy-Siva/nltk_sentiment_analyzer.git

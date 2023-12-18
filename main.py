@@ -8,6 +8,11 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 bot = Bot()
 
 
+@app.route("/")
+def hello_world():
+    return "<p>Welcome</p>"
+
+
 @app.route("/chat")
 def home():
     query = request.args.get('query')
@@ -17,4 +22,5 @@ def home():
 
 
 if __name__ == "__main__":
-    app.run()
+    from waitress import serve
+    serve(app)

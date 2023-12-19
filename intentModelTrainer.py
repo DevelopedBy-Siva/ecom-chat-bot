@@ -3,11 +3,11 @@ import json
 import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
-from app.text_processing_utils import create_bag_of_words, tokenize_sentence, stem
-from intent_classifier_model import CustomNeuralNetwork
+from textProcessingUtils import create_bag_of_words, tokenize_sentence, stem
+from intentClassifierModel import CustomNeuralNetwork
 
 # Load data from JSON file
-with open('data.json', 'r') as json_file:
+with open('data/data.json', 'r') as json_file:
     intent_data = json.load(json_file)
 
 # Extract patterns and tags from intent data
@@ -111,7 +111,7 @@ model_data = {
     "intent_tags": intent_tags
 }
 
-file_path = "intent_model.pth"
+file_path = "data/intent_model.pth"
 torch.save(model_data, file_path)
 
 print(f'Training complete. Model data saved to {file_path}')

@@ -1,4 +1,4 @@
-from chatbot import Bot
+from app.chatbot import Bot
 from flask import Flask, request
 from flask_cors import CORS
 

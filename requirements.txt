@@ -2,3 +2,5 @@ Flask==3.0.0
 Flask-Cors==4.0.0
 nltk==3.8.1
 waitress==2.1.2
+torch==2.1.1
+numpy==1.26.2

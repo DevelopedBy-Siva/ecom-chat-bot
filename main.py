@@ -18,8 +18,7 @@ def home():
     query = request.args.get('query')
     if not query:
         raise ValueError("Query cannot be empty.")
-    bot.filter()
-    return bot.display()
+    return "Hello World"
 
 
 if __name__ == "__main__":

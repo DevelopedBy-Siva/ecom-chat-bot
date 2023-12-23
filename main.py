@@ -27,9 +27,12 @@ def home():
         is_logged_in = data.get('isLoggedIn')
         if not is_logged_in:
             is_logged_in = False
+        started = data.get('started')
+        if not started:
+            started = False
 
         # Generate Chat
-        return chatbot.generate_chat(message, is_logged_in)
+        return chatbot.generate_chat(message, is_logged_in, started)
     except Exception:
         return jsonify({"error": "Something went wrong"}), 500
 

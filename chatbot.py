@@ -4,12 +4,15 @@ import torch
 from textProcessingUtils import create_bag_of_words, tokenize_sentence
 from intentClassifierModel import CustomNeuralNetwork
 
+help_with = "I can assist you with,\n\n- Snagging the best deals in town! 🌟 \n -  Tracking orders 📦\n -  Updating " \
+            "your address 🏠\n -  Changing your password 🔐\n -  Available payment options 💳"
+
 
 class ChatBot:
 
     def __init__(self):
         # Bot name
-        self.bot_name = "Jarvis"
+        self.bot_name = "ChatterBot"
 
         # Set the device
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -35,7 +38,7 @@ class ChatBot:
             self.model.load_state_dict(model_state)
             self.model.eval()
 
-    def generate_chat(self, query, is_logged_in):
+    def generate_chat(self, query, is_logged_in, started):
         # Process the user input
         user_input_tokens = tokenize_sentence(query)
         bag_of_words = create_bag_of_words(user_input_tokens, self.all_words)
@@ -54,7 +57,7 @@ class ChatBot:
         confidence = probabilities[0][predicted.item()]
 
         # Default response
-        response = "Could you please explain this in a different way?"
+        response = "Could you please explain this in a different way? " + help_with
 
         if confidence.item() > 0.75:
             for intent in self.intents_data['intents']:
@@ -62,5 +65,6 @@ class ChatBot:
                     response = random.choice(intent['responses'])
         return {
             "bot_name": self.bot_name,
-            "query": response
+            "query": response,
+            "started": help_with if started else None
         }

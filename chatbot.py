@@ -58,13 +58,16 @@ class ChatBot:
 
         # Default response
         response = "Could you please explain this in a different way? " + help_with
+        isLogged = False
 
         if confidence.item() > 0.75:
             for intent in self.intents_data['intents']:
                 if predicted_tag == intent["tag"]:
                     response = random.choice(intent['responses'])
+                    isLogged = intent["isLogged"]
         return {
             "bot_name": self.bot_name,
             "query": response,
-            "started": help_with if started else None
+            "started": help_with if started else None,
+            "isLogged": isLogged if not is_logged_in else None
         }

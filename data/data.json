@@ -24,7 +24,8 @@
         "Good day! What brings you to our online shop?",
         "Hey, what's up? Need assistance with anything?",
         "Yo! What can I help you with today?"
-      ]
+      ],
+      "isLogged": false
     },
     {
       "tag": "goodbye",
@@ -51,7 +52,8 @@
         "Adios! Gracias for shopping with us.",
         "See you soon! Feel free to reach out if you need anything.",
         "Catch you later! It's been a pleasure assisting you."
-      ]
+      ],
+      "isLogged": false
     },
     {
       "tag": "thanks",
@@ -78,7 +80,8 @@
         "You're very welcome! If there's anything else I can do, just ask.",
         "Thanks a million for your kind words! Let me know if there's anything else I can do for you.",
         "Thank you! You're awesome too. If you have more questions, feel free to reach out."
-      ]
+      ],
+      "isLogged": false
     },
     {
       "tag": "payments",
@@ -134,7 +137,8 @@
         "We offer two convenient payment options: Cash on Delivery (COD) and all major credit/debit cards.",
         "To make a payment, you can choose between Cash on Delivery or any bank credit/debit card.",
         "We accept Cash on Delivery and all major bank credit/debit cards."
-      ]
+      ],
+      "isLogged": false
     },
     {
       "tag": "delivery",
@@ -200,7 +204,8 @@
       ],
       "responses": [
         "For the latest updates on your order, real-time tracking, order details, or cancellation, navigate to your account page.___track"
-      ]
+      ],
+      "isLogged": true
     },
     {
       "tag": "service",
@@ -253,7 +258,8 @@
       ],
       "responses": [
         "I can assist you with,\n\n - Snagging the best deals in town! 🌟 \n -  Tracking orders 📦\n -  Updating your address 🏠\n -  Changing your password 🔐\n -  Available payment options 💳"
-      ]
+      ],
+      "isLogged": false
     },
     {
       "tag": "address",
@@ -306,7 +312,8 @@
       ],
       "responses": [
         "For any changes to your shipping address, select 'Your Address,' and update the information. You can also set default address by choosing 'Set as Default.' To manage address, navigate to your account page.___address"
-      ]
+      ],
+      "isLogged": true
     },
     {
       "tag": "password",
@@ -360,7 +367,8 @@
       ],
       "responses": [
         "To change your password, you can do so easily from your account page.___password"
-      ]
+      ],
+      "isLogged": true
     },
     {
       "tag": "offers",
@@ -400,7 +408,8 @@
       ],
       "responses": [
         "Yes, we currently have some exciting deals and promotions!___deals"
-      ]
+      ],
+      "isLogged": false
     }
   ]
 }

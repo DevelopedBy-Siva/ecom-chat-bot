@@ -8,12 +8,12 @@ CORS(app, resources={r"/*": {"origins": "https://shopit-now-client.vercel.app"}}
 chatbot = ChatBot()
 
 
-@app.route("/")
+@app.route("/api/")
 def hello_world():
     return "<p>Welcome</p>"
 
 
-@app.route("/chat", methods=['POST'])
+@app.route("/api/chat", methods=['POST'])
 def home():
     try:
         data = request.get_json()
